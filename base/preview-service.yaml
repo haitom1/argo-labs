@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: vote-preview
+  name: vote-preview
+spec:
+  ports:
+  - name: vote-preview
+    port: 80
+    targetPort: 80
+    protocol: TCP
+    nodePort: 30100
+  selector:
+    app: vote
+  type: NodePort
+status:
+  loadBalancer: {}
