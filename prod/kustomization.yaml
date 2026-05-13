@@ -3,6 +3,9 @@ kind: Kustomization
 resources:
 - ../base
 - ingress.yaml
+- fitness-analysistemplate.yaml
+- latency-analysistemplate.yaml
+- loadtest-analysistemplate.yaml
   #replicas:
   #- count: 2
   #name: vote
